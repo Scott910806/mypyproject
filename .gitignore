@@ -6,4 +6,5 @@
 /__pycache__
 /config
 /tests/webtest
+/tests/reoprts
 /main/__pycache__
