@@ -6,3 +6,4 @@
 /__pycache__
 /config
 /tests/webtest
+/main/__pycache__
