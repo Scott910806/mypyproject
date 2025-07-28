@@ -1,0 +1,6 @@
+/.DS_Store
+/.pytest_cache
+/.venv
+/.vscode
+/.zshrc
+/__pycache__
