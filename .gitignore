@@ -8,3 +8,4 @@
 /tests/webtest
 /tests/reports
 /main/__pycache__
+/allure-results
