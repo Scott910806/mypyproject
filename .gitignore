@@ -9,4 +9,5 @@
 /tests/reports
 /main/__pycache__
 /utils/__pycache__
+/tests/__pycache__
 /allure-results
