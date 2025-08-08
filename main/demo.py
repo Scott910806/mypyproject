@@ -73,6 +73,9 @@ def partition(arr, low, high):
 
 
 if __name__ == "__main__":
-    a, b = 1, 2
-    a, b = b, a
-    print(a, b)
+    def example():
+        x = 10
+        y = 20
+        print(vars())
+        
+    example()

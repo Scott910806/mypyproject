@@ -25,7 +25,5 @@ def get_current_day(format='%Y-%m-%d'):
     return datetime.now().strftime(format)
 
 if __name__  == '__main__':
-    biz_key_random_value = f"{get_current_day()}{get_random_number(8)}"
-    biz_key = f"PF-liufang_test-{biz_key_random_value}"
-    print(biz_key_random_value)
-    print(biz_key)
+    current_day = get_current_day("%Y年%-m月%-d日")
+    print(current_day)
