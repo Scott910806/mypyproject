@@ -1,9 +1,9 @@
 /.DS_Store
-/.pytest_cache
 /.venv
 /.vscode
 /.zshrc
-/__pycache__
+**/__pycache__
 /config
 /tests/webtest
-/main/__pycache__
+/tests/reports
+/allure-results
