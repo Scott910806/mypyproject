@@ -17,3 +17,10 @@ def parametrized_username(request):
 @pytest.fixture
 def non_parametrized_username():
     return 'username'
+@pytest.fixture
+def mock_env_user(monkeypatch):
+    monkeypatch.setenv('USER', 'mocked-username')
+
+@pytest.fixture
+def mock_env_user_missing(monkeypatch):
+    monkeypatch.delenv('USER', raising=False)

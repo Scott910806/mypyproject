@@ -2,3 +2,7 @@
 牧童骑黄牛
 意欲捕鸣蝉
 忽然闭口立
+error
+success
+paused
+exception

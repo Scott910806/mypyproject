@@ -1,40 +1,40 @@
-def ask_ok(prompt, retries=4, reminder='Please try again!'):
-    while True:
-        replay = input(prompt)
-        if replay in {'y', 'ye', 'yes'}:
-            return True
-        if replay in {'n', 'no', 'nop', 'nope'}:
-            return False
-        retries -= 1
-        if retries < 0:
-            raise ValueError('invalid user response!')
-        
-def cheeseshop(kind, *arguments, **keywords):
-    print("-- Do you have any", kind, "?")
-    print("-- I'm sorry, we're all out of", kind)
-    for arg in arguments:
-        print(arg)
-    print("-"*40)
-    for kw in keywords:
-        print(kw, ":", keywords[kw])
-
-def my_function():
-    """Do nothing, but document it.
+class A:
+    def __init__(self):
+        print("A.__init__")
     
-    No, really, it doesn't do anything.
-    """
-    pass
+    def method(self):
+        print("A.method")
 
-def f(ham:str, eggs:str = 'eggs') -> str:
-    print("Annotations:" , f.__annotations__)
-    print("Arguments:", ham, eggs)
-    return ham + ' and ' + eggs
+class B(A):
+    def __init__(self):
+        print("B.__init__")
+        super().__init__()
+    
+    def method(self):
+        print("B.method")
+        super().method()
 
-if __name__ == '__main__':
-    cheeseshop("Limburger", "It's very runny, sir.",
-           "It's really very, VERY runny, sir.",
-           shopkeeper="Michael Palin",
-           client="John Cleese",
-           sketch="Cheese Shop Sketch")
-    print(my_function.__doc__)
-    f('spam')
+class C(A):
+    def __init__(self):
+        print("C.__init__")
+        super().__init__()
+    
+    def method(self):
+        print("C.method")
+        super().method()
+
+class D(B, C):
+    def __init__(self):
+        print("D.__init__")
+        super().__init__()
+    
+    def method(self):
+        print("D.method")
+        super().method()
+
+# 测试初始化顺序
+print("=== 初始化顺序 ===")
+d = D()
+
+print("\n=== 方法调用顺序 ===")
+d.method()
